@@ -1,0 +1,128 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Cellar Notes · Wine education &amp; consultancy concept</title>
+<meta name="description" content="Website concept for a wine educator: learning hub, tasting sessions and consultancy.">
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@500;600;700&family=Karla:wght@400;500;700&display=swap" rel="stylesheet">
+<style>
+:root{--wine:#5b1a2b;--deep:#2b0d16;--rose:#e8c9c4;--gold:#c9a45c;--paper:#f8f3ec;--ink:#2a1e20;--mute:#7b6a6c;--line:#e7dbd2}
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth}
+body{font-family:Karla,system-ui,sans-serif;background:var(--paper);color:var(--ink);line-height:1.6}
+a{color:inherit;text-decoration:none}
+.wrap{max-width:1160px;margin:auto;padding:0 22px}
+header{position:absolute;top:0;left:0;right:0;z-index:5;color:#f8f3ec}
+.nav{display:flex;justify-content:space-between;align-items:center;height:80px}
+.logo{font-family:"Cormorant Garamond",serif;font-size:1.7rem;font-weight:700}
+.logo i{color:var(--gold);font-style:normal}
+nav a{margin-left:26px;opacity:.85}nav a:hover{opacity:1}
+.hero{background:radial-gradient(circle at 80% 30%,#7a2439 0,transparent 45%),linear-gradient(160deg,var(--deep),var(--wine));color:#f8f3ec;padding:150px 0 90px;position:relative;overflow:hidden}
+.hero .g{display:grid;grid-template-columns:1.3fr 1fr;gap:40px;align-items:center}
+.eyebrow{color:var(--gold);letter-spacing:3px;text-transform:uppercase;font-size:.8rem;font-weight:700}
+h1{font-family:"Cormorant Garamond",serif;font-size:clamp(2.8rem,6vw,5rem);line-height:1;margin:14px 0 20px;font-weight:600}
+.hero p{opacity:.85;font-size:1.1rem;max-width:520px;margin-bottom:30px}
+.btn{display:inline-block;background:var(--gold);color:var(--deep);padding:14px 26px;border-radius:40px;font-weight:700;border:0;cursor:pointer;font:inherit;font-weight:700}
+.btn.o{background:transparent;color:inherit;border:1px solid currentColor;margin-left:10px}
+.glass svg{width:100%;max-width:320px;display:block;margin:auto}
+.search{margin-top:34px;display:flex;background:#fff;border-radius:40px;padding:6px;max-width:480px}
+.search input{flex:1;border:0;padding:10px 16px;font:inherit;border-radius:40px;outline:0}
+section{padding:90px 0}
+h2{font-family:"Cormorant Garamond",serif;font-size:clamp(2rem,4vw,3rem);line-height:1.05;margin-bottom:10px;color:var(--wine)}
+.sub{color:var(--mute);margin-bottom:34px;max-width:620px}
+.tabs{display:flex;gap:10px;flex-wrap:wrap;margin-bottom:26px}
+.tab{padding:9px 18px;border-radius:30px;border:1px solid var(--line);background:#fff;cursor:pointer;font:inherit}
+.tab.on{background:var(--wine);color:#fff;border-color:var(--wine)}
+.learn{display:grid;grid-template-columns:repeat(3,1fr);gap:22px}
+.item{background:#fff;border-radius:18px;overflow:hidden;border:1px solid var(--line);transition:.2s}
+.item:hover{transform:translateY(-4px);box-shadow:0 14px 30px rgba(91,26,43,.1)}
+.thumb{aspect-ratio:16/10;display:grid;place-items:center;font-size:2.4rem;color:#fff;position:relative}
+.kind{position:absolute;top:12px;left:12px;background:rgba(255,255,255,.92);color:var(--wine);font-size:.72rem;font-weight:700;padding:4px 10px;border-radius:20px;text-transform:uppercase;letter-spacing:1px}
+.item .b{padding:18px}.item h3{font-family:"Cormorant Garamond",serif;font-size:1.4rem;line-height:1.15;margin-bottom:6px}.item p{color:var(--mute);font-size:.92rem}
+.meta{font-size:.8rem;color:var(--gold);font-weight:700;margin-top:10px}
+.path{background:#fff;border-top:1px solid var(--line);border-bottom:1px solid var(--line)}
+.steps{display:grid;grid-template-columns:repeat(4,1fr);gap:18px}
+.steps div{padding:22px;border-radius:16px;background:var(--paper)}
+.steps b{font-family:"Cormorant Garamond",serif;font-size:2rem;color:var(--gold)}
+.steps h4{margin:4px 0}.steps p{color:var(--mute);font-size:.9rem}
+.svc{display:grid;grid-template-columns:1fr 1fr;gap:26px}
+.card{border-radius:22px;padding:36px;position:relative;overflow:hidden}
+.card.t{background:var(--wine);color:#f8f3ec}.card.c{background:#fff;border:1px solid var(--line)}
+.card h3{font-family:"Cormorant Garamond",serif;font-size:2rem;margin-bottom:10px}
+.card ul{list-style:none;margin:18px 0 24px}.card li{padding:8px 0;border-bottom:1px solid rgba(201,164,92,.3)}
+.price{font-family:"Cormorant Garamond",serif;font-size:1.6rem;color:var(--gold);margin-bottom:16px}
+.sessions{margin-top:30px;display:grid;gap:12px}
+.sess{display:grid;grid-template-columns:110px 1fr auto;gap:18px;align-items:center;background:#fff;border:1px solid var(--line);border-radius:14px;padding:16px 20px}
+.date{font-family:"Cormorant Garamond",serif;font-size:1.3rem;color:var(--wine);font-weight:700}
+.seats{font-size:.82rem;color:var(--mute)}
+.info{background:var(--deep);color:#f8f3ec;border-radius:24px;padding:40px;display:grid;grid-template-columns:1fr 1.2fr;gap:30px;align-items:center}
+.info h2{color:#f8f3ec}
+.bars div{margin-bottom:14px}.bars span{display:flex;justify-content:space-between;font-size:.88rem;margin-bottom:5px}
+.bars i{display:block;height:8px;border-radius:8px;background:linear-gradient(90deg,var(--gold),#e8c9c4)}
+.news{text-align:center}.news form{display:flex;gap:10px;justify-content:center;flex-wrap:wrap;margin-top:20px}
+.news input{padding:14px 20px;border-radius:40px;border:1px solid var(--line);min-width:280px;font:inherit}
+footer{background:var(--deep);color:#c9b8b9;padding:40px 0;font-size:.88rem}
+.concept{position:fixed;bottom:14px;left:14px;background:#fff;border:1px solid var(--line);border-radius:30px;padding:6px 14px;font-size:.74rem;color:var(--mute);z-index:9}
+@media(max-width:880px){.hero .g,.svc,.info{grid-template-columns:1fr}.learn{grid-template-columns:1fr}.steps{grid-template-columns:1fr 1fr}nav{display:none}.glass{display:none}.sess{grid-template-columns:1fr}.btn.o{margin:10px 0 0}.hero{padding:120px 0 70px}}
+</style>
+</head>
+<body>
+<header><div class="wrap nav"><a class="logo" href="#">Cellar <i>Notes</i></a>
+<nav><a href="#learn">Learn</a><a href="#path">Wine Path</a><a href="#services">Tastings &amp; Consultancy</a><a href="#news">Newsletter</a></nav></div></header>
+
+<div class="hero"><div class="wrap g">
+<div><div class="eyebrow">Wine education · Tastings · Consultancy</div>
+<h1>Understand every glass you pour.</h1>
+<p>Clear, friendly lessons on grapes, regions and tasting, plus hosted tasting sessions and one-to-one consultancy for private clients and restaurants.</p>
+<a class="btn" href="#learn">Start learning</a><a class="btn o" href="#services">Book a tasting</a>
+<form class="search" onsubmit="event.preventDefault();document.getElementById('learn').scrollIntoView()"><input placeholder="Search: Pinot Noir, tannins, food pairing…"><button class="btn">Search</button></form></div>
+<div class="glass" aria-hidden="true"><svg viewBox="0 0 200 300"><path d="M50 20h100c4 60-8 110-50 118C58 130 46 80 50 20z" fill="none" stroke="#c9a45c" stroke-width="3"/><path d="M53 70h94c-4 40-20 62-47 66-27-4-44-26-47-66z" fill="#8c2a43"/><path d="M100 138v110M60 250h80" stroke="#c9a45c" stroke-width="3" stroke-linecap="round"/></svg></div>
+</div></div>
+
+<section id="learn"><div class="wrap">
+<h2>The learning hub</h2><p class="sub">Articles, video tutorials and infographics, organised by topic and level, so visitors always find their next lesson.</p>
+<div class="tabs" id="tabs"><button class="tab on" data-k="all">All</button><button class="tab" data-k="article">Articles</button><button class="tab" data-k="video">Videos</button><button class="tab" data-k="infographic">Infographics</button></div>
+<div class="learn" id="grid"></div>
+</div></section>
+
+<section id="path" class="path"><div class="wrap">
+<h2>Your wine path</h2><p class="sub">A guided route through the content, from first sip to confident buyer.</p>
+<div class="steps"><div><b>I</b><h4>Taste like a pro</h4><p>Look, swirl, smell, sip, the 5-step method.</p></div><div><b>II</b><h4>Know your grapes</h4><p>The 12 varieties behind most bottles.</p></div><div><b>III</b><h4>Read the map</h4><p>Regions, climate and why they matter.</p></div><div><b>IV</b><h4>Pair &amp; buy</h4><p>Food pairing and smart buying on any budget.</p></div></div>
+</div></section>
+
+<section id="services"><div class="wrap">
+<h2>Tastings &amp; consultancy</h2><p class="sub">Two ways to work together, each with its own detailed page and booking form.</p>
+<div class="svc">
+<div class="card t"><h3>Wine tasting sessions</h3><p>Guided tastings for small groups, private events and teams, in person or online with wines delivered.</p><ul><li>6 wines, one theme</li><li>Tasting notes &amp; pairing card</li><li>Groups of 4–20</li></ul><div class="price">from £45 / guest</div><a class="btn" href="#upcoming">See dates</a></div>
+<div class="card c"><h3>Wine consultancy</h3><p style="color:var(--mute)">Independent advice for restaurants, retailers and private collectors.</p><ul><li>Wine list design &amp; staff training</li><li>Cellar planning &amp; buying strategy</li><li>Event and gift selections</li></ul><div class="price">Free 20-min intro call</div><a class="btn" style="background:var(--wine);color:#fff" href="#news">Enquire</a></div>
+</div>
+<div class="sessions" id="upcoming">
+<div class="sess"><div class="date">Sat 7 Nov</div><div><b>Old World vs New World reds</b><div class="seats">London · 7 pm · 6 of 12 seats left</div></div><button class="btn" onclick="this.textContent='Reserved ✓'">Reserve</button></div>
+<div class="sess"><div class="date">Thu 19 Nov</div><div><b>Online: Sparkling wine masterclass</b><div class="seats">Zoom · 8 pm · wines shipped to you</div></div><button class="btn" onclick="this.textContent='Reserved ✓'">Reserve</button></div>
+<div class="sess"><div class="date">Sat 5 Dec</div><div><b>Festive food &amp; wine pairing</b><div class="seats">London · 6 pm · 3 seats left</div></div><button class="btn" onclick="this.textContent='Reserved ✓'">Reserve</button></div>
+</div>
+</div></section>
+
+<section style="padding-top:0"><div class="wrap info">
+<div><div class="eyebrow">Infographic preview</div><h2>Body of popular reds</h2><p style="opacity:.8">Infographics are built in HTML, not as images, so they load fast, stay sharp and are readable by Google.</p></div>
+<div class="bars"><div><span>Pinot Noir<em>light</em></span><i style="width:30%"></i></div><div><span>Grenache<em>light–medium</em></span><i style="width:45%"></i></div><div><span>Merlot<em>medium</em></span><i style="width:60%"></i></div><div><span>Syrah<em>full</em></span><i style="width:82%"></i></div><div><span>Cabernet Sauvignon<em>full</em></span><i style="width:92%"></i></div></div>
+</div></section>
+
+<section id="news" class="news"><div class="wrap"><h2>One lesson a week</h2><p class="sub" style="margin:auto">Join the newsletter: a short lesson, one bottle recommendation and upcoming tasting dates.</p>
+<form onsubmit="event.preventDefault();this.innerHTML='<p><b>Cheers! You are on the list (demo).</b></p>'"><input type="email" placeholder="Your email" required><button class="btn" style="background:var(--wine);color:#fff">Subscribe</button></form></div></section>
+
+<footer><div class="wrap">Cellar Notes · website concept with example name, dates and prices · SEO-ready structure (schema for articles, videos &amp; events)</div></footer>
+<div class="concept">Design concept · demo only</div>
+<script>
+const I=[
+{k:'article',t:'How to taste wine in five steps',d:'A simple method you can use with any glass, tonight.',m:'6 min read · Beginner',c:'#7a2439',e:'🍷'},
+{k:'video',t:'Decanting: when and why',d:'A short tutorial on aeration, sediment and timing.',m:'4:12 video · Beginner',c:'#3d4a3a',e:'▶'},
+{k:'infographic',t:'The wine aroma wheel',d:'Fruit, floral, earth and oak, mapped visually.',m:'Infographic · All levels',c:'#c9a45c',e:'◎'},
+{k:'article',t:'Burgundy without the confusion',d:'Villages, crus and labels explained clearly.',m:'9 min read · Intermediate',c:'#5b1a2b',e:'🗺'},
+{k:'video',t:'Food pairing basics',d:'Acid, fat, salt and sweetness: the rules that work.',m:'7:40 video · Beginner',c:'#8c5a3c',e:'▶'},
+{k:'infographic',t:'Serving temperatures chart',d:'From sparkling to fortified, at a glance.',m:'Infographic · Beginner',c:'#2b0d16',e:'🌡'}];
+function r(k){document.getElementById('grid').innerHTML=I.filter(x=>k=='all'||x.k==k).map(x=>`<a class="item" href="#learn"><div class="thumb" style="background:linear-gradient(140deg,${x.c},${x.c}aa)"><span class="kind">${x.k}</span>${x.e}</div><div class="b"><h3>${x.t}</h3><p>${x.d}</p><div class="meta">${x.m}</div></div></a>`).join('')}
+document.querySelectorAll('.tab').forEach(t=>t.onclick=()=>{document.querySelectorAll('.tab').forEach(o=>o.classList.remove('on'));t.classList.add('on');r(t.dataset.k)});r('all');
+</script>
+</body></html>
